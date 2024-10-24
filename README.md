@@ -19,16 +19,16 @@ The project requires Python 3.7+ and PyTorch 1.10+. All necessary dependencies a
 ## Installation
 Clone the repository:
 
-bash
-Copy code
+```bash
 git clone https://github.com/your-username/CWPFormer.git
 cd CWPFormer
+```
 Install the required Python packages:
 
-bash
-Copy code
-pip install -r requirements.txt
+```bash
 
+pip install -r requirements.txt
+```
 ## Usage
 
 Training
