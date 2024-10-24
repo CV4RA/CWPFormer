@@ -34,15 +34,15 @@ pip install -r requirements.txt
 Training
 To train the CWPFormer model on a dataset, run:
 
-bash
-Copy code
+```bash
 python train.py
+```
 This will train the model using the settings defined in config.py. The model checkpoints will be saved in the checkpoints/ directory, and logs will be available in the logs/ directory.
 
 Testing
 After training, you can test the model's performance on a test dataset by running:
 
-bash
-Copy code
+```bash
 python test.py
+```
 This will load the latest model checkpoint from checkpoints/ and evaluate it on the test data, reporting the accuracy.
