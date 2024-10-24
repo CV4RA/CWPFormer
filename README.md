@@ -1,6 +1,6 @@
 **CWPFormer** is a novel Visual Place Recognition (VPR) framework based on the Cross-weight Pyramid Transformer, designed for efficient robot navigation and localization tasks. This framework leverages advanced attention mechanisms like **Cascaded Hash Attention (CHA)** and a **Bayesian learning scheme** to enhance recognition accuracy and reduce computational redundancy, making it suitable for real-world robotics applications.
 
-![alt text](figure2-1.png)
+![alt text](/pic/figure2-1.png)
 
 ## Features
 
@@ -11,7 +11,7 @@
 
 ## Results
 
-![alt text](image.png)
+![alt text](/pic/image.png)
 
 ## Requirements
 The project requires Python 3.7+ and PyTorch 1.10+. All necessary dependencies are listed in the requirements.txt file.
