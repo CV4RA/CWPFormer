@@ -29,13 +29,20 @@ Install the required Python packages:
 
 pip install -r requirements.txt
 ```
-## Usage
+Datasets
+Make sure you download the data set for training and evaluation. We used the following data sets:
+- **KITTI**: Visual data set for robot positioning and navigation.
+- **Nordland**: Challenge datasets for seasonal and environmental changes.
+- **EuRoC**: Micro Air Vehicle dataset containing visual SLAM related data.
+
+After downloading the dataset, extract it and place it in the specified directory.
 
 Training
 To train the CWPFormer model on a dataset, run:
 
 ```bash
-python train.py
+python train.py --data_dir /path/to/dataset --epochs 10 --batch_size 64 --learning_rate 1e-4
+
 ```
 This will train the model using the settings defined in config.py. The model checkpoints will be saved in the checkpoints/ directory, and logs will be available in the logs/ directory.
 
@@ -43,6 +50,7 @@ Testing
 After training, you can test the model's performance on a test dataset by running:
 
 ```bash
-python test.py
+python test.py --model_checkpoint /path/to/checkpoint --test_dir /path/to/test_data
+
 ```
 This will load the latest model checkpoint from checkpoints/ and evaluate it on the test data, reporting the accuracy.
