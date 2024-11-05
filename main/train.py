@@ -6,7 +6,7 @@ from data_loader import get_dataset
 from utils import accuracy
 from saver import save_checkpoint, load_checkpoint
 from config import Config
-from losses import get_loss_fn
+from total_loss import TotalLoss
 from logger import setup_logger
 
 logger = setup_logger(Config.LOG_DIR)
@@ -16,7 +16,7 @@ train_loader, val_loader = get_dataset(batch_size=Config.BATCH_SIZE)
 model = CWPFormer(num_classes=Config.NUM_CLASSES)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
-criterion = get_loss_fn("cross_entropy")
+total_loss_fn = TotalLoss()
 optimizer = optim.AdamW(model.parameters(), lr=Config.LEARNING_RATE)
 
 start_epoch = load_checkpoint(model, optimizer, Config.CHECKPOINT_DIR)
